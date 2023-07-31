@@ -19,7 +19,17 @@ public function main() {
     io:print(result);
 
     util:langlib();
-    util:samoleList();
+    util:sample();
+
+    // 戻り値を指定しないといけないが使用しない場合には＿を使用して割り当て
+    // 参照できない任意の方の暗黙的に宣言された変数として機能する、複数書いても問題ない
+    // panicが戻り値が含まれる場合はcheckpanicをつける
+    // checkpanic tryX();
+    _ = util:hello("test");
+    _ = util:hello("test");
+    _ = util:hello("test");
+    _ = util:hello("test");
+    _ = util:hello("test");
 
 }
 
