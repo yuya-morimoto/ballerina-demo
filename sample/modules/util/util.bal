@@ -129,3 +129,47 @@ class FileTest {
 public function genFile() returns error? {
     _ = check new FileTest("test.txt");
 }
+
+enum Color {
+    RED,
+    GREEN,
+    BLUE
+}
+
+const RED = "RED";
+const GREEN = "GREEN";
+const BLUE = "BLUE";
+
+type ColorType RED|GREEN|BLUE;
+
+enum Language {
+    ENG = "English",
+    TL = "Tamil",
+    SI = "Sinhala"
+}
+
+const KEY = "xyzzy";
+
+function mtest(any v) returns string {
+
+    match v {
+        17 => {
+            return "number";
+        }
+        true => {
+            return "boolean";
+        }
+        "str" => {
+            return "string";
+        }
+        KEY => {
+            return "constant";
+        }
+        0|1 => {
+            return "or";
+        }
+        _ => {
+            return "any";
+        }
+    }
+}
